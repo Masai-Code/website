@@ -31,12 +31,13 @@ import  Image  from "next/image";
 export type Icon = LucideIcon
 
 export const Icons = {
-  logo: ({ ...props }) => (
+  logo: ({ ...props }: any) => (
     <Image
     src="/logo.png"
     width={100}
     height={50}
     alt="Logo"
+    {...props}
   />
   ),
   close: X,

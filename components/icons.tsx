@@ -9,7 +9,7 @@ import {
   File,
   FileText,
   HelpCircle,
-  Image,
+
   Laptop,
   Loader2,
   LucideProps,
@@ -26,10 +26,19 @@ import {
   type Icon as LucideIcon,
 } from "lucide-react"
 
+import  Image  from "next/image";
+
 export type Icon = LucideIcon
 
 export const Icons = {
-  logo: Command,
+  logo: ({ ...props }) => (
+    <Image
+    src="/logo.png"
+    width={100}
+    height={50}
+    alt="Logo"
+  />
+  ),
   close: X,
   spinner: Loader2,
   chevronLeft: ChevronLeft,

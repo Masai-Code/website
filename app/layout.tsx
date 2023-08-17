@@ -31,19 +31,17 @@ export const metadata = {
   },
   description: siteConfig.description,
   keywords: [
-    "Next.js",
-    "React",
-    "Tailwind CSS",
-    "Server Components",
-    "Radix UI",
+    "Software",
+    "Agency",
+    "Software Development",
   ],
   authors: [
     {
-      name: "shadcn",
-      url: "https://shadcn.com",
+      name: "Masai Code",
+      url: "https://masaicode.com",
     },
   ],
-  creator: "shadcn",
+  creator: "Masai Code",
   themeColor: [
     { media: "(prefers-color-scheme: light)", color: "white" },
     { media: "(prefers-color-scheme: dark)", color: "black" },
@@ -61,7 +59,7 @@ export const metadata = {
     title: siteConfig.name,
     description: siteConfig.description,
     images: [`${siteConfig.url}/og.jpg`],
-    creator: "@shadcn",
+    creator: "@MasaiCode",
   },
   icons: {
     icon: "/favicon.ico",

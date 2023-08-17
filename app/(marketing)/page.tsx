@@ -22,7 +22,7 @@ export default async function IndexPage() {
             With a passion for innovation, we turn your ideas into intelligent software solutions, delivering exceptional outcomes for SMEs, Enterprise, and Funded Startups..
           </p>
           <div className="space-x-4">
-            <Link href="/" className={cn(buttonVariants({ size: "lg" }))}>
+            <Link href="mailto:hello@masaicode.com" className={cn(buttonVariants({ size: "lg" }))}>
               Get in touch with us today to discuss your custom software development needs.
             </Link>
           </div>

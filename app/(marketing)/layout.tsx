@@ -19,7 +19,16 @@ export default async function MarketingLayout({
         <div className="flex h-20 items-center justify-between py-6">
           <MainNav items={marketingConfig.mainNav} />
           <nav>
-
+          <Link
+              href="https://calendly.com/masaicode/discovery-call"
+              target="_blank"
+              className={cn(
+                buttonVariants({  size: "sm" }),
+                "px-4"
+              )}
+            >
+              Book a Discovery Call
+            </Link>
           </nav>
         </div>
       </header>

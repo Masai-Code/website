@@ -1,9 +1,9 @@
-import Link from "next/link"
+'use client';
 
-import { env } from "@/env.mjs"
-import { siteConfig } from "@/config/site"
+import Link from "next/link"
 import { cn } from "@/lib/utils"
 import { buttonVariants } from "@/components/ui/button"
+import { TypeAnimation } from 'react-type-animation';
 
 
 
@@ -12,45 +12,65 @@ export default async function IndexPage() {
 
   return (
     <>
-      <section className="space-y-6 pb-8 pt-6 md:pb-12 md:pt-10 lg:py-32">
+      <section className=" space-y-6 pb-12 pt-6 md:pb-12 md:pt-10 lg:py-32">
         <div className="container flex max-w-[64rem] flex-col items-center gap-4 text-center">
 
-          <h1 className="font-heading text-3xl sm:text-5xl md:text-6xl lg:text-7xl">
-            Tailor-Made Solutions for Every Need
+        <h1 className="font-heading text-3xl sm:text-5xl md:text-6xl lg:text-7xl">
+           Convert your Idea into a
           </h1>
-          <p className="max-w-[42rem] leading-normal text-muted-foreground sm:text-xl sm:leading-8">
-            With a passion for innovation, we turn your ideas into intelligent software solutions, delivering exceptional outcomes for SMEs, Enterprise, and Funded Startups..
+        <TypeAnimation
+        preRenderFirstString={true}
+        className="font-heading text-3xl text-rose-500 sm:text-5xl md:text-6xl lg:text-7xl"
+      sequence={[
+        `Web App`,
+        2000,
+        `Mobile App`,
+        2000,
+        `SAAS`,
+        2000,
+        `Chrome Extension`,
+        2000,
+        `Landing Page`,
+        2000
+      ]}
+      wrapper="span"
+      speed={30}
+      repeat={Infinity}
+    />
+
+          <p className="max-w-[42rem] pt-8 leading-normal text-muted-foreground sm:text-xl sm:leading-8">
+          Delivering cutting edge solutions for startups at a flat fee
           </p>
-          <div className="space-x-4">
-            <Link href="mailto:hello@masaicode.com" className={cn(buttonVariants({ size: "lg" }))}>
-              Get in touch with us today to discuss your custom software development needs.
+          <div className="space-x-6 py-16">
+            <Link href="https://calendly.com/masaicode/discovery-call" target="_blank" className={cn(buttonVariants({ size: "lg" }))}>
+              Book a Discovery Call
             </Link>
           </div>
         </div>
       </section>
 
       <section
-        id="features"
+        id="services"
         className="container space-y-6  py-8 dark:bg-transparent md:py-12 lg:py-24"
       >
         <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center">
           <h2 className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-6xl">
-            Our Services
+           What we can build for you ...
           </h2>
           <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
-          We offer a wide range of custom software development services, including web development, mobile app development, API development, and software integrations
+         Anything software we got it handled 😊
           </p>
         </div>
-        <div className="mx-auto grid justify-center gap-4 sm:grid-cols-2 md:max-w-[100rem] md:grid-cols-4">
+        <div className="mx-auto grid justify-center gap-4 sm:grid-cols-2 md:max-w-[100rem] md:grid-cols-3">
 
           <div className="relative overflow-hidden rounded-lg border bg-background p-2">
             <div className="flex h-[300px] flex-col justify-between rounded-md p-6">
 
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#1e7650" viewBox="0 0 256 256" className="h-16 w-16 place-self-center fill-rose-500"><path d="M224,128a96,96,0,1,1-96-96A96,96,0,0,1,224,128Z" opacity="0.2"></path><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24ZM101.63,168h52.74C149,186.34,140,202.87,128,215.89,116,202.87,107,186.34,101.63,168ZM98,152a145.72,145.72,0,0,1,0-48h60a145.72,145.72,0,0,1,0,48ZM40,128a87.61,87.61,0,0,1,3.33-24H81.79a161.79,161.79,0,0,0,0,48H43.33A87.61,87.61,0,0,1,40,128ZM154.37,88H101.63C107,69.66,116,53.13,128,40.11,140,53.13,149,69.66,154.37,88Zm19.84,16h38.46a88.15,88.15,0,0,1,0,48H174.21a161.79,161.79,0,0,0,0-48Zm32.16-16H170.94a142.39,142.39,0,0,0-20.26-45A88.37,88.37,0,0,1,206.37,88ZM105.32,43A142.39,142.39,0,0,0,85.06,88H49.63A88.37,88.37,0,0,1,105.32,43ZM49.63,168H85.06a142.39,142.39,0,0,0,20.26,45A88.37,88.37,0,0,1,49.63,168Zm101.05,45a142.39,142.39,0,0,0,20.26-45h35.43A88.37,88.37,0,0,1,150.68,213Z"></path></svg>
               <div className="space-y-2 text-center">
-                <h3 className="text-xl font-bold">Web Application Development</h3>
+                <h3 className="text-xl font-bold">Web  Apps</h3>
                 <p className="text-sm text-muted-foreground">
-                We create web apps that are responsive, looking amazing and functioning perfectly on all screens. These apps are tailor-made for your business requirements.
+                Craft visually stunning and highly functional websites that leave a lasting impression on your audience. Our web development team combines creativity with technical expertise to bring your brand to life online
                 </p>
               </div>
             </div>
@@ -61,9 +81,9 @@ export default async function IndexPage() {
             <div className="flex h-[300px] flex-col justify-between rounded-md p-6">
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#1e7650" viewBox="0 0 256 256" className="h-16 w-16 place-self-center fill-rose-500"><path d="M192,56V200H64V56Z" opacity="0.2"></path><path d="M176,16H80A24,24,0,0,0,56,40V216a24,24,0,0,0,24,24h96a24,24,0,0,0,24-24V40A24,24,0,0,0,176,16ZM72,64H184V192H72Zm8-32h96a8,8,0,0,1,8,8v8H72V40A8,8,0,0,1,80,32Zm96,192H80a8,8,0,0,1-8-8v-8H184v8A8,8,0,0,1,176,224Z"></path></svg>
               <div className="space-y-2 text-center">
-                <h3 className="text-xl font-bold">Mobile Application Development</h3>
+                <h3 className="text-xl font-bold">Mobile Apps</h3>
                 <p className="text-sm text-muted-foreground">
-                We create mobile apps for all platforms that boost brand engagement, enhance customer experiences, and help your business thrive.
+                From iOS to Android, we create mobile applications that not only look good but also offer a seamless user experience. Your app, your way—tailored to your specifications.
                 </p>
               </div>
             </div>
@@ -71,23 +91,37 @@ export default async function IndexPage() {
 
           <div className="relative overflow-hidden rounded-lg border bg-background p-2">
             <div className="flex h-[300px] flex-col justify-between rounded-md p-6">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#1e7650" viewBox="0 0 256 256" className="h-16 w-16 place-self-center fill-rose-500"><path d="M128,72V216S24,160,24,94A54,54,0,0,1,78,40C100.59,40,119.94,52.31,128,72Z" opacity="0.2"></path><path d="M178,32c-20.65,0-38.73,8.88-50,23.89C116.73,40.88,98.65,32,78,32A62.07,62.07,0,0,0,16,94c0,70,103.79,126.67,108.21,129a8,8,0,0,0,7.58,0C136.21,220.67,240,164,240,94A62.07,62.07,0,0,0,178,32ZM32,94A46.06,46.06,0,0,1,78,48c18.91,0,34.86,9.79,42,25.65V202C93.59,185.44,32,141.78,32,94ZM136,202V73.65C143.14,57.79,159.09,48,178,48a46.06,46.06,0,0,1,46,46C224,141.71,162.42,185.41,136,202Z"></path></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#1e7650" viewBox="0 0 256 256" className="h-16 w-16 place-self-center fill-rose-500"><path d="M224,56V96H32V56a8,8,0,0,1,8-8H216A8,8,0,0,1,224,56Z" opacity="0.2"></path><path d="M216,40H40A16,16,0,0,0,24,56V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A16,16,0,0,0,216,40Zm0,16V88H40V56Zm0,144H40V104H216v96Z"></path></svg>
               <div className="space-y-2 text-center">
-                <h3 className="text-xl font-bold">UX Design Services</h3>
+                <h3 className="text-xl font-bold">Landing Pages</h3>
                 <p className="text-sm text-muted-foreground">
-                Allow our UX designers to enhance user experiences for your applications, whether they`re your own or developed by us
+                Make every click count with captivating landing pages that convert visitors into customers. Our design team ensures your landing page reflects your brand personality and converts leads effectively
                 </p>
               </div>
             </div>
           </div>
+
+
 
           <div className="relative overflow-hidden rounded-lg border bg-background p-2">
             <div className="flex h-[300px] flex-col justify-between rounded-md p-6">
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#1e7650" viewBox="0 0 256 256" className="h-16 w-16 place-self-center fill-rose-500"><path d="M225.94,161.94a48,48,0,0,1-67.88,0L128,128l30.06-33.94a48,48,0,0,1,67.88,67.88ZM30.06,94.06a48,48,0,0,0,67.88,67.88L128,128,97.94,94.06A48,48,0,0,0,30.06,94.06Z" opacity="0.2"></path><path d="M248,128a56,56,0,0,1-95.6,39.6l-.33-.35L92.12,99.55a40,40,0,1,0,0,56.9l8.52-9.62a8,8,0,1,1,12,10.61l-8.69,9.81-.33.35a56,56,0,1,1,0-79.2l.33.35,59.95,67.7a40,40,0,1,0,0-56.9l-8.52,9.62a8,8,0,1,1-12-10.61l8.69-9.81.33-.35A56,56,0,0,1,248,128Z"></path></svg>
               <div className="space-y-2 text-center">
-                <h3 className="text-xl font-bold">DevOps Services</h3>
+                <h3 className="text-xl font-bold">SAAS/Fullstack Apps</h3>
                 <p className="text-sm text-muted-foreground">
-                We use the DevOps model to create and update apps quickly, helping your business stay agile and up-to-date.
+                Experience the advantage of end-to-end development, covering frontend, backend, and database, to ensure a cohesive and efficient digital ecosystem.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="relative overflow-hidden rounded-lg border bg-background p-2">
+            <div className="flex h-[300px] flex-col justify-between rounded-md p-6">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#1e7650" viewBox="0 0 256 256" className="h-16 w-16 place-self-center fill-rose-500"><path d="M232,120v72a8,8,0,0,1-8,8H32a8,8,0,0,1-8-8V120Z" opacity="0.2"></path><path d="M224,64H176V56a24,24,0,0,0-24-24H104A24,24,0,0,0,80,56v8H32A16,16,0,0,0,16,80V192a16,16,0,0,0,16,16H224a16,16,0,0,0,16-16V80A16,16,0,0,0,224,64ZM96,56a8,8,0,0,1,8-8h48a8,8,0,0,1,8,8v8H96ZM32,80H224v32H192v-8a8,8,0,0,0-16,0v8H80v-8a8,8,0,0,0-16,0v8H32ZM224,192H32V128H64v8a8,8,0,0,0,16,0v-8h96v8a8,8,0,0,0,16,0v-8h32v64Z"></path></svg>
+              <div className="space-y-2 text-center">
+                <h3 className="text-xl font-bold">Consulting Services</h3>
+                <p className="text-sm text-muted-foreground">
+                Benefit from the insights of our experienced consultants who provide strategic guidance to propel your startup to new heights.
                 </p>
               </div>
             </div>
@@ -169,7 +203,7 @@ export default async function IndexPage() {
 
       </section>
 
-      <section id="open-source" className="container py-8 md:py-12 lg:py-24">
+      <section id="portfolio" className="container py-8 md:py-12 lg:py-24">
         <div className="mx-auto flex max-w-[58rem] flex-col items-center justify-center gap-4 text-center">
           <h2 className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-6xl">
             Our Projects

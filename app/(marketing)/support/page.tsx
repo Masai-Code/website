@@ -1,6 +1,7 @@
 import { buttonVariants } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
 import { cn } from "@/lib/utils";
 
 
@@ -35,7 +36,6 @@ export default function SupportPage() {
                                 autoCapitalize="none"
                                 autoCorrect="off"
                             />
-
                         </div>
                         <div className="grid gap-1 pt-3">
                             <Label className="sr-only" htmlFor="email">
@@ -55,13 +55,11 @@ export default function SupportPage() {
                             <Label className="sr-only" htmlFor="issue">
                                 Describe Issue
                             </Label>
-                            <Input
+                            <Textarea
                                 id="issue"
                                 placeholder="Describe your issue"
-                                type="text"
                                 autoCapitalize="none"
                                 autoCorrect="off"
-
                             />
 
                         </div>
